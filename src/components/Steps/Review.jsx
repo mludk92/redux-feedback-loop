@@ -5,20 +5,21 @@ import { useHistory } from 'react-router-dom';
 import axios from 'axios'
 
 function Review () {
+
     const history = useHistory();
     const feelingVal = useSelector(store => store.feeling);
     const understandVal = useSelector(store => store.understand);
     const supportVal = useSelector(store => store.support);
     const commentVal = useSelector(store => store.comments);
-
+    const dispatch = useDispatch();
 
 
 const sendToServer = () => {
     axios.post('/review', {
-        name: personName,
-        type: activityType,
-        minutes: minutes,
-        miles: miles,
+        feeling: feelingVal,
+        under: understandVal,
+        support: supportVal,
+        comments: commentVal,
     }).then(response => {
         // Clear our inputs
         dispatch({ type: 'CLEAR_FORM' });

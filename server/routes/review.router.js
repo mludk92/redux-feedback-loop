@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../modules/pool');
 
+
 // GET activities
 router.get('/', (req, res) => {
     console.log("In GET request");
@@ -17,9 +18,9 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
     console.log('POST req.body', req.body);
-    let queryText = 'INSERT INTO "activity" ("name", "type", "minutes", "miles") VALUES ($1, $2, $3, $4);';
-    let { name, type, minutes, miles } = req.body;
-    pool.query(queryText, [name, type, minutes, miles])
+    let queryText = 'INSERT INTO "feedback" ("feeling", "understanding", "support", "comments") VALUES ($1, $2, $3, $4);';
+    let { feeling, under, support, comments } = req.body;
+    pool.query(queryText, [feeling, under, support, comments])
         .then((result) => {
             res.sendStatus(200);
         }).catch((err) => {

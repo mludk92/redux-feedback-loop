@@ -22,6 +22,8 @@ else {
         host: 'localhost',
         port: 5432,
         database: 'prime_feedback', 
+        user:'mludkey',
+        password: 'admin',
     });
 }
 
