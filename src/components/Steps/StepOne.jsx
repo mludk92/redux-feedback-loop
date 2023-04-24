@@ -1,7 +1,10 @@
+import '../Steps/Steps.css';
+
+
 function StepOne() {
     return (
       <>
-        <div>How are you feeling today?<br/> Select a value</div>
+        <div>How are you feeling today?</div>
         <form>
           <select id="input" name="feeling">
             <option value="1">1</option>
@@ -11,6 +14,7 @@ function StepOne() {
             <option value="5">5</option>
           </select>
           <input type="submit" value="Next" />
+          <br/> Select a value
         </form>
       </>
     );
