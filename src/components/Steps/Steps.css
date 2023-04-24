@@ -1,17 +1,18 @@
 /* Style for the div element */
 div {
-    font-size: 1.5em;
+    font-size: 60px;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: 10px;
   }
   
   /* Style for the select element */
   select {
-    font-size: 1.2em;
-    padding: 0.5em;
+    font-size: 30px;
+    padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    width: 10em;
+    width: 300px;
+
   }
   
   /* Style for the submit button */
@@ -21,8 +22,18 @@ div {
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
-    font-size: 1.2em;
-    margin-top: 1em;
+    font-size: 30px;
+    margin-top: 10px;
     padding: 0.5em 1em;
   }
   
+  input[type="text"] {
+    background-color: #f8f8f8;
+    border: none;
+    border-radius: 5px;
+    color: #020202;
+    cursor: pointer;
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 0.5em 1em;
+  }

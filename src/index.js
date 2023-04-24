@@ -7,13 +7,41 @@ import logger from "redux-logger";
 import { Provider } from "react-redux";
 
 
-const feeling = (state = 0, action) => {
+const feeling = (state = 'Select From Values', action) => {
     // Always check the action.type before changing our value
     if (action.type === 'SET_FEELING_TODAY') {
         // This changes the value of our reducer
         return action.payload;
-    } else if (action.type === 'CLEAR_FORM') {
-        return 0;
+    }
+    // Value of our reducer remains unchanged
+    return state;
+}
+
+const understand = (state = 'Select From Values', action) => {
+    // Always check the action.type before changing our value
+    if (action.type === 'SET_UNDERSTANDING') {
+        // This changes the value of our reducer
+        return action.payload;
+    }
+    // Value of our reducer remains unchanged
+    return state;
+}
+
+const support = (state = 'Select From Values', action) => {
+    // Always check the action.type before changing our value
+    if (action.type === 'SET_SUPPORT') {
+        // This changes the value of our reducer
+        return action.payload;
+    }
+    // Value of our reducer remains unchanged
+    return state;
+}
+
+const comments = (state = '', action) => {
+    // Always check the action.type before changing our value
+    if (action.type === 'SET_COMMENT') {
+        // This changes the value of our reducer
+        return action.payload;
     }
     // Value of our reducer remains unchanged
     return state;
@@ -24,6 +52,9 @@ const storeInstance = createStore(
     combineReducers(
         {
             feeling,
+            understand,
+            support,
+            comments,
             // Other reducers go here
         }
     ),
