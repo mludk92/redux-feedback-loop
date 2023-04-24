@@ -2,6 +2,8 @@ import '../Steps/Steps.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
+
+
 function StepFour () {
     const history = useHistory();
     const dispatch = useDispatch();
@@ -17,7 +19,7 @@ function StepFour () {
 
     const nextPage = () => {
         
-        history.push('/reivew');
+        history.push('/review');
 }
     return (
         <>

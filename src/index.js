@@ -12,6 +12,8 @@ const feeling = (state = 'Select From Values', action) => {
     if (action.type === 'SET_FEELING_TODAY') {
         // This changes the value of our reducer
         return action.payload;
+    }else if (action.type === 'CLEAR_FORM') {
+        return 'Select From Values';
     }
     // Value of our reducer remains unchanged
     return state;
@@ -22,6 +24,8 @@ const understand = (state = 'Select From Values', action) => {
     if (action.type === 'SET_UNDERSTANDING') {
         // This changes the value of our reducer
         return action.payload;
+    }else if (action.type === 'CLEAR_FORM') {
+        return 'Select From Values';
     }
     // Value of our reducer remains unchanged
     return state;
@@ -32,6 +36,8 @@ const support = (state = 'Select From Values', action) => {
     if (action.type === 'SET_SUPPORT') {
         // This changes the value of our reducer
         return action.payload;
+    }else if (action.type === 'CLEAR_FORM') {
+        return 'Select From Values';
     }
     // Value of our reducer remains unchanged
     return state;
@@ -42,6 +48,8 @@ const comments = (state = '', action) => {
     if (action.type === 'SET_COMMENT') {
         // This changes the value of our reducer
         return action.payload;
+    }else if (action.type === 'CLEAR_FORM') {
+        return '';
     }
     // Value of our reducer remains unchanged
     return state;
