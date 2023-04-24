@@ -1,12 +1,20 @@
-
-
-function StepOne () {
-
+function StepOne() {
     return (
-        <>
-        <div>StepOne </div>
-        </>
-    )
-}
-
-export default StepOne
+      <>
+        <div>How are you feeling today?<br/> Select a value</div>
+        <form>
+          <select id="input" name="feeling">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <input type="submit" value="Next" />
+        </form>
+      </>
+    );
+  }
+  
+  export default StepOne;
+  
